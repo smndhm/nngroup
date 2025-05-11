@@ -1,0 +1,26 @@
+{
+  "name": "front-end",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@nngroup/components": "workspace:*",
+    "@nngroup/styles": "workspace:*"
+  },
+  "devDependencies": {
+    "msw": "^2.8.2",
+    "typescript": "5.8.3",
+    "vite": "6.3.5"
+  },
+  "msw": {
+    "workerDirectory": [
+      "public",
+      "src/mocks"
+    ]
+  }
+}

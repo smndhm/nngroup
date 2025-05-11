@@ -1,0 +1,24 @@
+{
+  "name": "@nngroup/styles",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+ "scripts": {
+    "start": "sass scss:dist -w",
+    "build": "sass scss:dist -s compressed && cp -rf scss/fonts dist/fonts",
+    "build:dev": "sass scss:dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "files": [
+    "dist",
+    "scss"
+  ],
+  "dependencies": {
+    "modern-normalize": "3.0.1"
+  },
+  "devDependencies": {
+    "sass": "1.87.0"
+  }
+}

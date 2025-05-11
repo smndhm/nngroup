@@ -1,0 +1,37 @@
+.nng-course-enroll {
+  padding: 24px 32px;
+
+  fieldset {
+    border: none;
+    padding: 0;
+
+    caption {
+      text-align: start;
+      margin-bottom: 24px;
+      font: var(--nng-font-title-large);
+      display: inline-block;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      nng-course-card {
+        display: block;
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__action-enroll {
+    width: 100%;
+  }
+}

@@ -1,0 +1,28 @@
+:root {
+    /**
+     * Colors
+     */
+    // Neutrals
+    --nng-color-neutral-0: #000;
+    --nng-color-neutral-100: #fff;
+    --nng-color-neutral-80: #ccc;
+    // Primary
+    --nng-color-primary-20: #4D0001;
+    --nng-color-primary-30: #600C20;
+    --nng-color-primary-60: #ED0000;
+    --nng-color-primary-40: #A61518;
+    // Blue
+    --nng-color-blue-50: #0073DD;
+
+    /**
+     * Typography
+     */
+    --nng-font-title-large: 600 34px/38px 'Source Sans', sans-serif;
+    --nng-font-title-small: 400 30px/38px 'Source Sans', sans-serif;
+    --nng-font-title-small-bold: 700 30px/38px 'Source Sans', sans-serif;
+    --nng-font-heading-medium: 700 24px/32px 'Source Sans', sans-serif;
+    --nng-font-heading-small: 700 20px/26px 'Source Sans', sans-serif;
+    --nng-font-body-medium: 400 18px/24px 'Source Sans', sans-serif;
+    --nng-font-body-medium-semibold: 600 18px/24px 'Source Sans', sans-serif;
+    --nng-font-body-medium-bold: 700 18px/24px 'Source Sans', sans-serif;
+}
