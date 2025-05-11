@@ -8,7 +8,11 @@ defineCustomElements();
 const nngCourseEnroll = document.querySelector('nng-course-enroll') as HTMLNngCourseEnrollElement | null;
 
 import('./mocks/browser').then(({ worker }) => {
-  worker.start().then(() => {
+  worker.start({
+    serviceWorker: {
+      url: '/nngroup/mockServiceWorker.js',
+    },
+  }).then(() => {
     getCoursesSchedule(1).then((response) => {
       if (nngCourseEnroll !== null) {
         nngCourseEnroll.courses = response;
