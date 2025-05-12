@@ -1,21 +1,31 @@
 import { Component, Prop, h } from '@stencil/core';
 
+/**
+ * Course card component that displays course details including dates, instructors, and pricing
+ */
 @Component({
   tag: 'nng-course-card',
   styleUrl: 'nng-course-card.scss',
   shadow: false,
 })
 export class NngCourseCard {
+  /** Course information including dates, instructors, location and pricing */
   @Prop() course: any;
 
+  /** Whether this course selection is required */
   @Prop() required: boolean;
 
+  /** Mapping of timezone IDs to display names */
   #timeZoneMappings = {
     'America/New_York': 'New York City',
     // Ajoutez d'autres correspondances si nécessaire
   };
 
-  // Fonction pour formater une date en jour de la semaine et mois/jour
+  /**
+   * Formats a Unix timestamp into day of week and month/day format
+   * @param timestamp - Unix timestamp in seconds
+   * @returns Object containing formatted day and month/day strings
+   */
   #formatDate = timestamp => {
     const date = new Date(timestamp * 1000);
     const dayFormatter = new Intl.DateTimeFormat('en-US', { weekday: 'long' });
@@ -27,7 +37,11 @@ export class NngCourseCard {
     };
   };
 
-  // Fonction pour formater une heure en format 12 heures
+  /**
+   * Formats a Unix timestamp into 12-hour time format with AM/PM
+   * @param timestamp - Unix timestamp in seconds
+   * @returns Formatted time string
+   */
   #formatTime = (timestamp: number) => {
     const date = new Date(timestamp * 1000);
     const timeFormatter = new Intl.DateTimeFormat('en-US', {

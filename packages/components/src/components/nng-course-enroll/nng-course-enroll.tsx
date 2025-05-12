@@ -1,23 +1,39 @@
 import { Component, Event, EventEmitter, Prop, State, h } from '@stencil/core';
 
+/**
+ * Course enrollment component that allows users to select and save courses
+ */
 @Component({
   tag: 'nng-course-enroll',
   styleUrls: ['nng-course-enroll.scss', '../../../node_modules/@nngroup/styles/dist/buttons.css'],
   shadow: true,
 })
 export class NngCourseEnroll {
+  /** Array of available courses */
   @Prop() courses: any = [];
 
+  /** Whether the course is saved */
   @Prop({ reflect: true }) saved: boolean = false;
 
+  /** Event emitted when save button is clicked */
   @Event({ eventName: 'save' }) save: EventEmitter<boolean>;
 
+  /** Whether a course has been selected */
   @State() choosed: boolean = false;
 
+  /**
+   * Handles save button click
+   * @private
+   */
   #handleSave = () => {
     this.save.emit(this.saved);
   };
 
+  /**
+   * Handles form change events to validate course selection
+   * @private
+   * @param target - The event target element
+   */
   #handleChange = ({ target }) => {
     this.choosed = (target as HTMLFormElement).checkValidity();
   };
