@@ -1,4 +1,4 @@
-import { Component, Event, EventEmitter, Prop, State, h } from '@stencil/core';
+import { Component, Event, EventEmitter, Prop, State, h } from '@stencil/core'; // eslint-disable-line @typescript-eslint/no-unused-vars
 
 /**
  * Course enrollment component that allows users to select and save courses
@@ -10,7 +10,7 @@ import { Component, Event, EventEmitter, Prop, State, h } from '@stencil/core';
 })
 export class NngCourseEnroll {
   /** Array of available courses */
-  @Prop() courses: any = [];
+  @Prop() courses: any = []; // eslint-disable-line @typescript-eslint/no-explicit-any
 
   /** Whether the course is saved */
   @Prop({ reflect: true }) saved: boolean = false;

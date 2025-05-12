@@ -1,4 +1,4 @@
-import { Component, Prop, h } from '@stencil/core';
+import { Component, Prop, h } from '@stencil/core'; // eslint-disable-line @typescript-eslint/no-unused-vars
 
 /**
  * Course card component that displays course details including dates, instructors, and pricing
@@ -10,7 +10,7 @@ import { Component, Prop, h } from '@stencil/core';
 })
 export class NngCourseCard {
   /** Course information including dates, instructors, location and pricing */
-  @Prop() course: any;
+  @Prop() course: any; // eslint-disable-line @typescript-eslint/no-explicit-any
 
   /** Whether this course selection is required */
   @Prop() required: boolean;
@@ -96,12 +96,16 @@ export class NngCourseCard {
           </span>
         </div>
         <ul role="list" class="nng-course-card__instructors">
-          {this.course.instructors.map((instructor: any) => (
-            <li class="nng-course-card__instructor">
-              <img src={instructor.portrait_image} alt="" />
-              Instructor: {instructor.first_name} {instructor.last_name}
-            </li>
-          ))}
+          {this.course.instructors.map(
+            (
+              instructor: any, // eslint-disable-line @typescript-eslint/no-explicit-any
+            ) => (
+              <li class="nng-course-card__instructor">
+                <img src={instructor.portrait_image} alt="" />
+                Instructor: {instructor.first_name} {instructor.last_name}
+              </li>
+            ),
+          )}
         </ul>
       </label>
     );

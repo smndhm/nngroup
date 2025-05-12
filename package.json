@@ -8,19 +8,31 @@
     "build": "turbo build",
     "build:packages": "turbo build --filter=./packages/*",
     "prettier": "prettier --write .",
+    "eslint": "eslint '**/*.{js,ts,mjs,mts,cjs,tsx,vue}'",
     "prepare": "husky"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "**/*": "pnpm prettier",
+    "**/*.{js,ts,mjs,mts,cjs,tsx,vue}": "pnpm eslint --fix"
   },
   "devDependencies": {
+    "@eslint/compat": "^1.2.9",
+    "@eslint/css": "^0.7.0",
+    "@eslint/js": "^9.26.0",
+    "@eslint/json": "^0.12.0",
+    "@eslint/markdown": "^6.4.0",
     "@manypkg/cli": "^0.24.0",
+    "@stencil-community/eslint-plugin": "^0.10.0",
+    "eslint": "^9.26.0",
+    "eslint-config-turbo": "^2.5.3",
+    "globals": "^16.1.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.0.0",
     "prettier": "^3.5.3",
-    "turbo": "^2.5.3"
+    "turbo": "^2.5.3",
+    "typescript-eslint": "^8.32.0"
   }
 }
