@@ -1,13 +1,13 @@
 // Modern Normalize: https://github.com/sindresorhus/modern-normalize
-@use '../node_modules/modern-normalize/modern-normalize';
+@use "../node_modules/modern-normalize/modern-normalize";
 
 // Custom properties (CSS variables)
-@use 'custom-properties';
+@use "custom-properties";
 
-@use 'fonts';
+@use "fonts";
 
-@use 'buttons';
+@use "buttons";
 
 body {
-    font-family: 'Source Sans', sans-serif;
+  font-family: "Source Sans", sans-serif;
 }

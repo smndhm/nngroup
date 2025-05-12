@@ -31,10 +31,8 @@ export const config: Config = {
       // ],
     },
   ],
-  plugins: [
-    sass(),
-  ],
+  plugins: [sass()],
   testing: {
-    browserHeadless: "shell",
+    browserHeadless: 'shell',
   },
 };

@@ -24,7 +24,7 @@ Components are built with [StencilJS](https://stenciljs.com/):
 
 ## Styles
 
-Style is built with [SCSS](https://sass-lang.com/).
+Style is built with [SCSS](https://sass-lang.com/) and [BEM](https://getbem.com/) methodology.
 
 Use of custom properties to propagate styles inside components.
 

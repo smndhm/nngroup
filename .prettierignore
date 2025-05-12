@@ -1,0 +1,5 @@
+# Ignore generated files
+pnpm-lock.yaml
+apps/front-end/public/mockServiceWorker.js
+packages/components/src/components.d.ts
+packages/components/src/components/**/readme.md

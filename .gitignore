@@ -1,3 +1,5 @@
 node_modules
 dist
 .turbo
+packages/components/www
+packages/components/loader

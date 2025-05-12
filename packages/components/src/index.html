@@ -1,76 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>Components</title>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
-  <title>Components</title>
+    <script type="module" src="/build/components.esm.js"></script>
+    <script nomodule src="/build/components.js"></script>
+    <link rel="stylesheet" href="/build/components.css" />
+  </head>
 
-  <script type="module" src="/build/components.esm.js"></script>
-  <script nomodule src="/build/components.js"></script>
-  <link rel="stylesheet" href="/build/components.css" />
-</head>
-
-<body>
-  <nng-course-enroll></nng-course-enroll>
-  <script>
-    document.querySelector('nng-course-enroll').courses =
-      [
+  <body>
+    <nng-course-enroll></nng-course-enroll>
+    <script>
+      document.querySelector('nng-course-enroll').courses = [
         {
-          "id": 4776,
-          "dates": [
-            [
-              1711378800,
-              1711391400
-            ],
-            [
-              1711465200,
-              1711477800
-            ]
+          id: 4776,
+          dates: [
+            [1711378800, 1711391400],
+            [1711465200, 1711477800],
           ],
-          "instructors": [
+          instructors: [
             {
-              "first_name": "Tim",
-              "last_name": "Neusesser",
-              "portrait_image": "https://media.nngroup.com/media/people/photos/Tim-portrait-2022.jpg.200x200_q75_autocrop_crop-smart_upscale.jpg"
-            }
+              first_name: 'Tim',
+              last_name: 'Neusesser',
+              portrait_image: 'https://media.nngroup.com/media/people/photos/Tim-portrait-2022.jpg.200x200_q75_autocrop_crop-smart_upscale.jpg',
+            },
           ],
-          "location": {
-            "timezone": "America/New_York"
+          location: {
+            timezone: 'America/New_York',
           },
-          "pricing": {
-            "amount": 1044,
-            "currency": "USD",
-            "valid_until": 1709182800
-          }
+          pricing: {
+            amount: 1044,
+            currency: 'USD',
+            valid_until: 1709182800,
+          },
         },
         {
-          "id": 4837,
-          "dates": [
-            [
-              1713538800,
-              1713564000
-            ]
-          ],
-          "instructors": [
+          id: 4837,
+          dates: [[1713538800, 1713564000]],
+          instructors: [
             {
-              "first_name": "Maddie",
-              "last_name": "Brown",
-              "portrait_image": "https://media.nngroup.com/media/people/photos/_DSC4827-Edit-Edit.jpg.200x200_q75_autocrop_crop-smart_upscale.jpg"
-            }
+              first_name: 'Maddie',
+              last_name: 'Brown',
+              portrait_image: 'https://media.nngroup.com/media/people/photos/_DSC4827-Edit-Edit.jpg.200x200_q75_autocrop_crop-smart_upscale.jpg',
+            },
           ],
-          "location": {
-            "timezone": "America/New_York"
+          location: {
+            timezone: 'America/New_York',
           },
-          "pricing": {
-            "amount": 1049,
-            "currency": "USD",
-            "valid_until": 1710907200
-          }
-        }
+          pricing: {
+            amount: 1049,
+            currency: 'USD',
+            valid_until: 1710907200,
+          },
+        },
       ];
-  </script>
-  <!-- <nng-course-card></nng-course-card>
+    </script>
+    <!-- <nng-course-card></nng-course-card>
   <script>
     document.querySelector('nng-course-card').course =
     {
@@ -102,6 +89,5 @@
       }
     };
   </script> -->
-</body>
-
+  </body>
 </html>
