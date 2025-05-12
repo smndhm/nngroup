@@ -7,8 +7,9 @@
   "scripts": {
     "build": "turbo build",
     "build:packages": "turbo build --filter=./packages/*",
-    "prettier": "prettier --write .",
+    "prettier": "prettier .",
     "eslint": "eslint '**/*.{js,ts,mjs,mts,cjs,tsx,vue}'",
+    "stylelint": "stylelint '**/*.{scss,css}' --ignore-path .gitignore",
     "prepare": "husky"
   },
   "keywords": [],
@@ -16,7 +17,8 @@
   "license": "ISC",
   "lint-staged": {
     "**/*": "pnpm prettier",
-    "**/*.{js,ts,mjs,mts,cjs,tsx,vue}": "pnpm eslint --fix"
+    "**/*.{js,ts,mjs,mts,cjs,tsx,vue}": "pnpm eslint",
+    "**/*.{scss,css}": "pnpm stylelint"
   },
   "devDependencies": {
     "@eslint/compat": "^1.2.9",
@@ -32,6 +34,10 @@
     "husky": "^9.1.7",
     "lint-staged": "^16.0.0",
     "prettier": "^3.5.3",
+    "stylelint": "^16.19.1",
+    "stylelint-config-idiomatic-order": "^10.0.0",
+    "stylelint-config-standard-scss": "^15.0.0",
+    "stylelint-prettier": "^5.0.3",
     "turbo": "^2.5.3",
     "typescript-eslint": "^8.32.0"
   }

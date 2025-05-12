@@ -2,19 +2,19 @@
   padding: 24px 32px;
 
   fieldset {
-    border: none;
     padding: 0;
+    border: none;
 
     caption {
-      text-align: start;
+      display: inline-block;
       margin-bottom: 24px;
       font: var(--nng-font-title-large);
-      display: inline-block;
+      text-align: start;
     }
 
     ul {
-      margin: 0;
       padding: 0;
+      margin: 0;
       list-style: none;
 
       nng-course-card {
