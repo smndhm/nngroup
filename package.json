@@ -7,13 +7,19 @@
   "scripts": {
     "build": "turbo build",
     "build:packages": "turbo build --filter=./packages/*",
-    "prettier": "prettier --write ."
+    "prettier": "prettier --write .",
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  },
   "devDependencies": {
     "@manypkg/cli": "^0.24.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.0.0",
     "prettier": "^3.5.3",
     "turbo": "^2.5.3"
   }
